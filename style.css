@@ -1,0 +1,56 @@
+:root {
+    --turquoise: #65e8e8; 
+    --grey: #d4d4d4; 
+} 
+
+
+body{
+    margin-top: 0; 
+    padding-top: 0; 
+    margin-bottom: 0; 
+    padding-bottom: 0;  
+    color: #696868;
+}
+
+div.container{
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    /*background-color: yellow;*/
+    overflow: hidden; 
+    position: relative; 
+    margin-top: 5rem; 
+    margin-bottom: 5rem;
+}   
+
+nav{ 
+
+}
+
+button{
+    border: var(--grey) solid 1px; 
+    color: #696868;
+    background-color: white; 
+    padding: 1rem;  
+    
+} 
+
+button.active{
+    background-color: var(--turquoise);
+}
+
+header{
+    border: var(--grey) solid 1px; 
+    margin-bottom: 5rem; 
+    padding: 2rem;
+} 
+
+main{
+    border: var(--grey) solid 1px; 
+    border-top: var(--turquoise) solid 5px; 
+    padding: 2rem;
+} 
+
+main ul li a{
+    color: var(--turquoise)
+}

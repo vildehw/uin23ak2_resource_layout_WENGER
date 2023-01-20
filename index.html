@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Ressursarkiv</title> 
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body> 
+    <div class="container">
+        <header> 
+            <h1>RESSURSARKIV</h1>
+        </header> 
+        <nav>
+            <button onClick="btnFunction()">Kategori 1</button> 
+            <button onClick="btnFunction()">Kategori 2</button> 
+            <button onClick="btnFunction()">kategori 3</button>
+        </nav>
+        <main>
+            <h2>Kategori 1</h2>  
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <ul>
+                <li><a href="#">link</a></li> 
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+            </ul> 
+        </main>
+</div> 
+    <script src="ressurser.js"></script> 
+
+    <script>
+
+
+        const button = document.querySelector("button") 
+        /**/
+        function btnFunction() {
+
+            if(button.classList.contains("active")) { 
+            
+                button.classList.remove("active")  
+                //kilde for å manipulere klasser https://developer.mozilla.org/en-US/docs/Web/API/Element/classList       
+                
+            } else { 
+                button.classList.add("active")
+                  
+            }
+            } 
+
+        if(button.classList.contains("active")) {
+            button.style.background = "#00ffff"
+        } 
+        /**/ 
+
+        let menuHTML = ``
+        
+        //Gå gjennom første nivå av menupoints-array
+        resources.map (resource => {
+            //TODO: Forbered HTML med overskrift og listestart 
+
+            menuHTML += `<h2>${resource.category}</h2>` 
+            menuHTML += `<p>${resource.text}</p>`
+
+            menuHTML += `<ul>`
+            //TODO: Gå gjennom array på andre nivå (menulinks)
+            //TODO: For hver menulink: fyll menuHTML med listeelementer og link 
+            resource.sources.map (source => {
+                menuHTML += `<li><a href="${source.url}">${source.title}</a></li>`  
+            })
+            menuHTML += `</ul>`
+            
+        }) 
+
+        console.log(menuHTML[1])
+        //TODO: Skriv ut HTML til <nav>:
+        document.querySelector("main").innerHTML = menuHTML 
+    </script>
+</body>
+</html>

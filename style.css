@@ -1,52 +1,49 @@
 :root {
-    --turquoise: #65e8e8; 
-    --grey: #d4d4d4; 
+    --turquoise: #63e3e3; 
+    --grey: #636363;  
+    --light: #d4d4d4;
 } 
-
 
 body{
     margin-top: 0; 
     padding-top: 0; 
     margin-bottom: 0; 
     padding-bottom: 0;  
-    color: #696868;
+    color: var(--grey);
 }
 
 div.container{
     width: 100%; 
     max-width: 800px; 
     margin: 0 auto; 
-    /*background-color: yellow;*/
     overflow: hidden; 
     position: relative; 
     margin-top: 5rem; 
     margin-bottom: 5rem;
-}   
+}    
 
-nav{ 
-
-}
-
-button{
-    border: var(--grey) solid 1px; 
-    color: #696868;
-    background-color: white; 
-    padding: 1rem;  
-    
+button{ 
+    border: var(--light) solid 1px; 
+    color: var(--grey);
+    padding: 1rem;   
+    margin-right: .5rem; 
+    background-color: #f1f1f1; 
 } 
 
 button.active{
-    background-color: var(--turquoise);
+    background-color: var(--turquoise); 
+    color: white; 
+    border: var(--turquoise) solid 1px
 }
 
 header{
-    border: var(--grey) solid 1px; 
+    border: var(--light) solid 1px; 
     margin-bottom: 5rem; 
     padding: 2rem;
 } 
 
 main{
-    border: var(--grey) solid 1px; 
+    border: var(--light) solid 1px; 
     border-top: var(--turquoise) solid 5px; 
     padding: 2rem;
 } 

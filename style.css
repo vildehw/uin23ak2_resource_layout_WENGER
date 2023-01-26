@@ -50,4 +50,11 @@ main{
 
 main ul li a{
     color: var(--turquoise)
+} 
+
+@media only screen and (max-width: 550px){
+
+    button{
+        width:100%;
+    }
 }
